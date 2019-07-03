@@ -1,0 +1,27 @@
+@mixin tdn() {
+	text-decoration: none;
+}
+
+@mixin tr($prop) {
+	transition: $prop .3s ease-in;
+}
+
+@mixin hover {
+	@include tr(all);
+	&:hover,
+	&:focus,
+	&:active{
+		@content;
+	}
+}
+
+@mixin icon {
+	background-repeat:no-repeat;
+	background-size: 60%;
+	background-position: center;
+	display: inline-block;	
+	width: 110px;	
+	height: 110px;	
+	border:2px solid #000;
+	border-radius:50%;
+}
